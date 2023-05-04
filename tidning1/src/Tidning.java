@@ -1,3 +1,6 @@
+import javax.swing.*;
+import java.sql.*;
+
 public class Tidning {
 
     private DagensNyheter dagensNyheter;
@@ -16,8 +19,11 @@ public class Tidning {
         return dagensNyheter;
     }
     public static void main(String[] args) {
-        Tidning tidning = new Tidning();
+       /// databas.md
 
+
+// skriva ut sidan dagensnyheter
+        Tidning tidning = new Tidning();
         DagensNyheter dagensNyheter = tidning.getDagensNyheter();
         System.out.println("Dagens nyheter:");
         System.out.println("Titel: " + dagensNyheter.getTitel());
@@ -25,5 +31,8 @@ public class Tidning {
         System.out.println("Författare: " + dagensNyheter.getFörfattare());
         System.out.println("Datum: " + dagensNyheter.getDatum());
     }
+
+
+
 }
 

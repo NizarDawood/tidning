@@ -31,10 +31,12 @@ public class databaseconnection {
             }
 
             while (result.next()) {
-                String output = "";
+                String output = "----";
                 output += result.getInt("id") + ", " +
+                        result.getString("titel") + ", " +
                         result.getString("content") + ", " +
-                        result.getString("title");
+                        result.getString("author") + ", " +
+                        result.getString("datum");
                 //result.getTimestamp()
 
                 System.out.println(output);

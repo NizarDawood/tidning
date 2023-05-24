@@ -1,6 +1,3 @@
-import javax.swing.*;
-import java.sql.*;
-
 public class Tidning {
 
     private DagensNyheter dagensNyheter;
@@ -10,8 +7,8 @@ public class Tidning {
 
     public Tidning() {
         dagensNyheter = new DagensNyheter();
-        sport = new Sport();
-        teknik = new Teknik();
+       // sport = new Sport();
+        //teknik = new Teknik();
         väder = new Väder();
     }
 

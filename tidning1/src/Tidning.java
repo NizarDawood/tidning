@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Tidning {
 
     private DagensNyheter dagensNyheter;
@@ -15,9 +17,15 @@ public class Tidning {
     public DagensNyheter getDagensNyheter() {
         return dagensNyheter;
     }
-    public static void main(String[] args) {
+    public void main(String[] args) {
        /// databas.md
+        JFrame frame;
 
+        frame = new JFrame("view");
+        frame.setContentPane(this.panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
 // skriva ut sidan dagensnyheter
         Tidning tidning = new Tidning();

@@ -1,7 +1,6 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -59,7 +58,7 @@ public class Väder {
         for (int i = 0; i < temp.length - 1; i++) {
             for (int j = i + 1; j < temp.length; j++) {
                 if (temp[i] < temp[j]) {
-                   // sortera tempratur
+                    // sortera tempratur
                     double tempTemp = temp[i];
                     temp[i] = temp[j];
                     temp[j] = tempTemp;
@@ -71,62 +70,16 @@ public class Väder {
                 }
             }
         }
-
-
-
         for (int i = 0; i < titel.length; i++) {
-
-            vaderview vader = new vaderview();
-            JTextArea weatherTextArea = vader.TextArea1();
-            weatherTextArea.setText("Titel: " + titel[i] + "Temperatur: " + temp[i] );
-
-            JTextArea weatherTextArea1 = vader.TextArea1();
-            JTextArea weatherTextArea2 = vader.TextArea2();
-            JTextArea weatherTextArea3 = vader.TextArea3();
-            JTextArea weatherTextArea4 = vader.TextArea4();
-            JTextArea weatherTextArea5 = vader.TextArea5();
-            JTextArea weatherTextArea6 = vader.TextArea6();
-            JTextArea weatherTextArea7 = vader.TextArea7();
-            JTextArea weatherTextArea8 = vader.TextArea8();
-            JTextArea weatherTextArea9 = vader.TextArea9();
-            JTextArea weatherTextArea10 = vader.TextArea10();
-            switch (i) {
-                case 0:
-                    weatherTextArea1.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 1:
-                    weatherTextArea2.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 2:
-                    weatherTextArea3.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 3:
-                    weatherTextArea4.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 4:
-                    weatherTextArea5.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 5:
-                    weatherTextArea6.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 6:
-                    weatherTextArea7.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 7:
-                    weatherTextArea8.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 8:
-                    weatherTextArea9.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                case 9:
-                    weatherTextArea10.setText("Titel: " + titel[i] + " Temperatur: " + temp[i]);
-                    break;
-                default:
-                    break;
-            }
+            System.out.println("Titel: " + titel[i]);
+            System.out.println("Temperatur: " + temp[i]);
+            System.out.println();
         }
+
+
     }
 }
+
 // URL u = new URL("http://api.temperatur.nu/tnu_1.17.php?p=ekholmen&cli=api_demo&token=XXXXXXXX");
 //        URLConnection conn = u.openConnection();
 //        BufferedReader in = new BufferedReader(

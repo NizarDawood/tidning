@@ -10,6 +10,8 @@ public class vaderview {
     private JButton button1;
     private JButton button2;
     private JButton button3;
+    private JButton button4;
+
 
     public vaderview() {
         JFrame frame = new JFrame("view");
@@ -39,6 +41,14 @@ public class vaderview {
             public void actionPerformed(ActionEvent e) {
                 teknikview teknik = new teknikview();
                 frame.setContentPane(teknik.getPanel2());
+                frame.pack();
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                view teknik = new view();
+                frame.setContentPane(view.getPanel4());
                 frame.pack();
             }
         });

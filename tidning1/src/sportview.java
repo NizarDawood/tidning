@@ -9,6 +9,7 @@ public class sportview {
     private JButton button1;
     private JButton button2;
     private JButton button3;
+    private JButton button4;
 
     public sportview() {
         JFrame frame = new JFrame("view");
@@ -41,7 +42,16 @@ public class sportview {
                 frame.pack();
             }
         });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                view teknik = new view();
+                frame.setContentPane(view.getPanel4());
+                frame.pack();
+            }
+        });
     }
+
 
     Container getPanel1() {
         return getPanel1();
@@ -50,8 +60,10 @@ public class sportview {
     public JTextArea getTextArea1() {
         return textArea1;
     }
-
     public static void main(String[] args) {
         sportview v = new sportview();
     }
 }
+
+
+

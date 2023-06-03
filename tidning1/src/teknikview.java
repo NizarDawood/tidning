@@ -9,6 +9,8 @@ public class teknikview {
     private JButton button1;
     private JButton button2;
     private JButton button3;
+    private JButton button4;
+
     public teknikview() { JFrame frame = new JFrame("view");
         frame.setContentPane(this.panel2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -36,6 +38,14 @@ public class teknikview {
             public void actionPerformed(ActionEvent e) {
                 teknikview teknik = new teknikview();
                 frame.setContentPane(teknik.getPanel2());
+                frame.pack();
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                view teknik = new view();
+                frame.setContentPane(view.getPanel4());
                 frame.pack();
             }
         });

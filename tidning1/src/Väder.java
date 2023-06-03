@@ -75,6 +75,7 @@ public class Väder {
             System.out.println("Temperatur: " + temp[i]);
             System.out.println();
         }
+        textArea1.setText(weatherData.toString());
 
 
     }

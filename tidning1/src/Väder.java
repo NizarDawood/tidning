@@ -10,7 +10,8 @@ import java.net.URLConnection;
 
 
 public class Väder {
-
+    private String[] titel;
+    private double[] temp;
 
     public static void main(String[] args) throws IOException {
         String[] urls = {
@@ -71,14 +72,22 @@ public class Väder {
             }
         }
         for (int i = 0; i < titel.length; i++) {
-            System.out.println("Titel: " + titel[i]);
-            System.out.println("Temperatur: " + temp[i]);
-            System.out.println();
+
+
         }
-        textArea1.setText(weatherData.toString());
+
+
 
 
     }
+    public String[] getTitel() {
+        return titel;
+    }
+
+    public double[] getTemp() {
+        return temp;
+    }
+
 }
 
 // URL u = new URL("http://api.temperatur.nu/tnu_1.17.php?p=ekholmen&cli=api_demo&token=XXXXXXXX");
